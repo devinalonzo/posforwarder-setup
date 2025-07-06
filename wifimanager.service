@@ -1,0 +1,10 @@
+[Unit]
+Description=POS WiFi Config AP Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/posforwarder/wifi-joiner/joiner.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
